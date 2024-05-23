@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+ server:
+    build:
+      dockerfile: Dockerfile
+      args:
+        - LATENCY=10
+    ports:
+      - "24000-26000:7861"
+    environment:
+      - RUST_LOG=info
+      - STARTIP=${STARTIP}
+
+

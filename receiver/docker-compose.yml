@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+ server:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "24000-26000:7861"
+    environment:
+      - RUST_LOG=info
+      - PORT=${PORT}
+
+
